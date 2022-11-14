@@ -1,0 +1,5 @@
+from postgres:alpine
+EXPOSE 5432
+ENV POSTGRES_PASSWORD docker
+ENV POSTGRES_USER docker
+ENV POSTGRES_INITDB_ARGS "--auth-local=trust"
