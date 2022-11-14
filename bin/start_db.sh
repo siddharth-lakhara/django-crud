@@ -1,1 +1,1 @@
-docker run -d --name postgres-docker -p 5432:5432 postgres-img
+docker run -d --name postgres-django -p 5432:5432 postgres-django-img

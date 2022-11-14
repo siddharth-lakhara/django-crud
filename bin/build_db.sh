@@ -1,4 +1,4 @@
-docker stop postgres-docker
-docker rm postgres-docker
-docker image rm -f postgres-img
-docker image build -t postgres-img .
+docker stop postgres-django
+docker rm postgres-django
+docker image rm -f postgres-django-img
+docker image build -t postgres-django-img .

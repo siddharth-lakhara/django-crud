@@ -1,5 +1,5 @@
 from postgres:alpine
 EXPOSE 5432
-ENV POSTGRES_PASSWORD docker
-ENV POSTGRES_USER docker
-ENV POSTGRES_INITDB_ARGS "--auth-local=trust"
+ENV POSTGRES_PASSWORD django_user_pass
+ENV POSTGRES_USER django_user
+ENV POSTGRES_INITDB_ARGS "--auth-local=md5"
