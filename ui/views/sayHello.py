@@ -1,5 +1,5 @@
 # from django.shortcuts import render
-from django.http import HttpResponsxe
+from django.http import HttpResponse
 
 def say_hello(request):
   return HttpResponse('pong')
