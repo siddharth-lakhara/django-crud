@@ -17,5 +17,14 @@ def handleGetReq(request: HttpRequest) -> HttpResponse:
   return HttpResponse(json.dumps(allStudents_list))
 
 def handlePostReq(request: HttpRequest) -> HttpResponse:
-  return HttpResponse('path working')
+  try:
+    reqBody = json.loads(request.body)
+    data = StudentsList(name=reqBody['name'], age=reqBody['age'])
+    data.save()
+    return HttpResponse('OK')
+  except:
+    res = HttpResponse('Cannot save this data')
+    res.status_code = 500
+    return res
+  
 
